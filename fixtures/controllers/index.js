@@ -17,10 +17,10 @@
  *   version: 1.0.1
  * host: localhost:8090
  * basePath: /
- *       consumes:
- *         - application/json
- *       produces:
- *         - application/json
+ * consumes:
+ *   - application/json
+ * produces:
+ *   - application/json
  * tags:
  *   - name: pet
  *     description: Everything about your Pets
