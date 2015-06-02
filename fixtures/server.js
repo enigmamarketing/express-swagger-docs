@@ -9,15 +9,8 @@ var express = require('express'),
     server;
 
 app.use(swaggerDocs({
-    path: '/docs',
     directory: routerFolder,
-    templateFiles: '',
-    requestHandler: function (req, res, next) {
-        var self = this,
-            data = self.data;
-
-        res.json(data);
-    }
+    corsOrigin: true
 }));
 
 app.use(enrouten({

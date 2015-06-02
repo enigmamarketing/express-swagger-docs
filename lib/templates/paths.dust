@@ -1,0 +1,33 @@
+<h2>Paths</h2>
+{@iter for=data.paths}
+	<h3>{.key}</h3>{! the path !}
+
+	{! Lets always show the HTTP methods in the same order !}
+	{?.value.options}
+		{>"express-swagger-docs/operation.dust" item=value.options method="options"/}
+	{/.value.options}
+
+	{?.value.head}
+		{>"express-swagger-docs/operation.dust" item=value.head method="head"/}
+	{/.value.head}
+
+	{?.value.get}
+		{>"express-swagger-docs/operation.dust" item=value.get method="get"/}
+	{/.value.get}
+
+	{?.value.post}
+		{>"express-swagger-docs/operation.dust" item=value.post method="post"/}
+	{/.value.post}
+
+	{?.value.put}
+		{>"express-swagger-docs/operation.dust" item=value.put method="put"/}
+	{/.value.put}
+
+	{?.value.patch}
+		{>"express-swagger-docs/operation.dust" item=value.patch method="patch"/}
+	{/.value.patch}
+
+	{?.value.delete}
+		{>"express-swagger-docs/operation.dust" item=value.delete method="delete"/}
+	{/.value.delete}
+{/iter}

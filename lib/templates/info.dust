@@ -1,0 +1,6 @@
+<h2>{data.info.title}</h2>
+<div>{data.info.description}</div>
+
+{?data.info.termsOfService}
+	<a href="{data.info.termsOfService}">Terms of Service</a>
+{/data.info.termsOfService}
