@@ -1,0 +1,43 @@
+<h4 class="{method}">
+	<span class="method">{method}</span>
+	<span class="summary">{item.summary}</span>
+</h4>
+
+<div class="description">{item.description}</div>
+
+<div class="tags">
+Tagged as:
+	{#item.tags}
+		<div class="tag">
+			{.name}
+			{?.description}
+				- {.description}
+			{/.description}
+
+			{?.externalDocs}
+				&nbsp;<a href="{.externalDocs.url}">{.externalDocs.description}</a>
+			{/.externalDocs}
+		</div>
+	{/item.tags}
+</div>
+
+<div class="consumes">
+	Consumes: 
+	<ul>
+		{#item.consumes}
+			<li>{.}</li>
+		{/item.consumes}
+	</ul>
+</div>
+
+<div class="produces">
+	Produces: 
+	<ul>
+		{#item.produces}
+			<li>{.}</li>
+		{/item.produces}
+	</ul>
+</div>
+
+<div class="parameters">Parameters
+</div>

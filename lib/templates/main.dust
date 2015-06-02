@@ -1,0 +1,18 @@
+<html>
+	<head>
+
+		<style>{>"express-swagger-docs/css/main.css" /}</style>
+	</head>
+	<body>
+		<h1>API Documentation</h1>
+		<div>
+			<p>This document follows <a href="http://swagger.io">Swagger</a> specification, version 2.0.</p>
+			<p>There are <a href="https://github.com/swagger-api/swagger-codegen">code generators</a> that use the <a href="">JSON document</a> to build client libraries in your programming language. You can also use the <a href="https://github.com/swagger-api/swagger-ui">Swagger UI</a> to test the api.</p>
+		</div>
+
+		{>"express-swagger-docs/info.dust" /}
+		{>"express-swagger-docs/paths.dust" /}
+
+		<script>{>"express-swagger-docs/js/main.js" /}</script>
+	</body>
+</html>

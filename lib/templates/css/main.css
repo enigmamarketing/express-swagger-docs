@@ -1,0 +1,17 @@
+h1{
+	background: #eee;
+}
+h2{
+	background: #ccc;
+}
+h3{
+	background: #fcc;
+}
+h4{
+	background: #000;
+	color: #fff;
+	padding: 5px 20px;
+}
+h4 .summary{
+	float: right;
+}

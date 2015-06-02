@@ -35,35 +35,22 @@
 module.exports = function (router) {
     /**
      * @SwaggerPath
-     *   /pet:
-     *     post:
+     *   /:
+     *     get:
      *       summary: just a test route
      *       description: nothing to see here
      *       tags:
      *         - test
-     *       consumes: 
+     *         - pet
+     *       consumes:
      *         - application/json
-     *       produces: 
+     *       produces:
      *         - application/json
-     *
-     
-     
-     
-     
-     * path: /activity-streams
-     * operations:
-     *   - httpMethod: GET
-     *     summary: List all items
-     *     notes: List all items
-     *     nickname: activity-streamsGET
-     *     type: array
-     *     items:
-     *       $ref: Activity-stream
-     *     produces:
-     *       - application/json
-     *     responseMessages:
-     *       - code: 200
-     *         message: OK
+     *       responses:
+     *         200:
+     *           description: successful operation
+     *           schema:
+     *             $ref: "#/definitions/ApiResponse"
      */
     router.get('/', function (req, res) {
         res.json(+new Date());
@@ -71,29 +58,27 @@ module.exports = function (router) {
 
     /**
      * @SwaggerPath
-     * path: /activity-streams/{id}
-     * operations:
-     *   - httpMethod: GET
-     *     summary: Get single item
-     *     notes: Shows data from a single item.
-     *     nickname: ActivityStreamGetOne
-     *     type: ActivityStream
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - name: id
-     *         description: Payment method ID
-     *         required: true
-     *         type: string
-     *         paramType: path
-     *         allowMultiple: false
-     *     responseMessages:
-     *       - code: 200
-     *         message: OK
-     *       - code: 400
-     *         message: Invalid ID format
-     *       - code: 404
-     *         message: Activity-stream not found
+     *   /{id}:
+     *     get:
+     *       summary: just a test route
+     *       description: nothing to see here
+     *       tags:
+     *         - test
+     *       consumes:
+     *         - application/json
+     *       produces:
+     *         - application/json
+     *       parameters:
+     *         - name: id
+     *           in: path
+     *           description: just an ID
+     *           required: true
+     *           type: string
+     *       responses:
+     *         200:
+     *           description: successful operation
+     *           schema:
+     *             $ref: "#/definitions/ApiResponse"
      */
     router.get('/:id', function (req, res) {
         res.json(+new Date());
@@ -101,49 +86,38 @@ module.exports = function (router) {
 
     /**
      * @SwaggerPath
-     * path: /activity-streams
-     * operations:
-     *   - httpMethod: POST
-     *     summary: Create a new item
-     *     notes: Creates a new item
-     *     nickname: ActivityStreamPost
-     *     type: ActivityStream
-     *     consumes:
-     *       - application/json
-     *       - application/x-www-form-urlencoded
-     *     parameters:
-     *       - name: body
-     *         description: Document to insert
-     *         required: true
-     *         type: ActivityStream
-     *         paramType: body
-     *         allowMultiple: false
-     *     responseMessages:
-     *       - code: 200
-     *         message: Item created. Returns the ID of the created item.
-     *       - code: 400
-     *         message: Invalid data supplied. Please check model validations.
-     *       - code: 409
-     *         message: Database conflict.
+     *   /:
+     *     post:
+     *       summary: just a test route
+     *       description: nothing to see here
+     *       tags:
+     *         - test
+     *       consumes:
+     *         - application/json
+     *       produces:
+     *         - application/json
+     *       responses:
+     *         200:
+     *           description: successful operation
+     *           schema:
+     *             $ref: "#/definitions/ApiResponse"
      */
     router.post('/', function (req, res) {
         res.json(+new Date());
     });
+
+
     /**
-     * @SwaggerPath
-     * models:
-     *   Activity-stream:
-     *     id: Activity-stream
-     *     title: Activity-stream
-     *     description: Schema for one activity-stream
-     *     required:
-     *       - title
+     * @SwaggerDefinitions
+     *   ApiResponse:
+     *     type: object
      *     properties:
-     *       title:
-     *         type: String
-     *         description: Title of activity-stream
-     *       slug:
-     *         type: String
-     * description: Slug used in URLs
+     *       code:
+     *         type: integer
+     *         format: int32
+     *       type:
+     *         type: string
+     *       message:
+     *         type: string
      */
 };
