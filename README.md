@@ -55,14 +55,14 @@ We can write these sections:
 - @SwaggerPath
 - @SwaggerDefinitions
 
-#### @swaggerHeader 
+#### @SwaggerHeader 
 Only the **info.title** and **info.version** properties are mandatory. There can be more than one instance of the swagger header definition, properties will be overwritten. There is no pre-defined order by which the properties will be merged. 
 
 Usually this is placed in the same file we have our home route (**/**), but it's really up to you.
 
 ```
 /**
- * @swaggerHeader
+ * @SwaggerHeader
  * info:
  *   title: Swagger Sample App
  *   version: 1.0.0
@@ -73,7 +73,7 @@ But you may define any additional properties
 
 ```
 /**
- * @swaggerHeader
+ * @SwaggerHeader
  * info:
  *   title: Swagger Sample App
  *   description: This is a sample server Petstore server.
@@ -98,12 +98,12 @@ But you may define any additional properties
  */
 ```
 
-#### @swaggerTag
-We don't need to define the tags array in the @swaggerHeader. These definitions can be distributed across the files and the plugin will merge them into the tags array. Once again, duplications will be merged in no particular order.
+#### @SwaggerTag
+We don't need to define the tags array in the @SwaggerHeader. These definitions can be distributed across the files and the plugin will merge them into the tags array. Once again, duplications will be merged in no particular order.
 
 ```
 /**
- * @swaggerTag
+ * @SwaggerTag
  * pet:
  *  description: Everything about your Pets
  *  externalDocs:
@@ -111,7 +111,7 @@ We don't need to define the tags array in the @swaggerHeader. These definitions 
  *    url: http://swagger.io
 ```
 
-#### @swaggerPath
+#### @SwaggerPath
 There will be multiple definitions of this block, one per each exposed express handler you wish do document as a REST endpoint. Usually, we place them right before the method they are describing, but it really doesn't matter where you place them.
 
 ```
@@ -138,8 +138,8 @@ exports.login = function (req, res) {
 }
 ```
 
-#### @swaggerDefinitions
-Definitions may be defined in the @swaggerHeader but you can also define them in the document where they are used. As before, duplications will be merged in no particular order.
+#### @SwaggerDefinitions
+Definitions may be defined in the @SwaggerHeader but you can also define them in the document where they are used. As before, duplications will be merged in no particular order.
 
 ```
 /**
