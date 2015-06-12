@@ -109,6 +109,7 @@ We don't need to define the tags array in the @SwaggerHeader. These definitions 
  *  externalDocs:
  *    description: Find out more
  *    url: http://swagger.io
+ */
 ```
 
 #### @SwaggerPath
