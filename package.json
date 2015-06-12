@@ -1,32 +1,36 @@
 {
-  "name": "express-swagger-docs",
-  "version": "0.0.1",
-  "description": "Generates swagger docs from express router files",
-  "main": "lib/index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "keywords": [
-    "swagger",
-    "express"
-  ],
-  "author": "EnigmaMarketing",
-  "license": "Apache 2.0",
-  "dependencies": {
-    "async": "^0.9.0",
-    "clone": "^1.0.2",
-    "doctrine": "^0.6.4",
-    "dustjs-helpers": "^1.7.1",
-    "dustjs-linkedin": "^2.7.1",
-    "js-yaml": "^3.3.1",
-    "merge": "^1.2.0",
-    "swagger-tools": "^0.8.7"
-  },
-  "devDependencies": {
-    "express-enrouten": "^1.2.1",
-    "express": "^4.12.3"
-  }
+    "name": "express-swagger-docs",
+    "version": "0.0.2",
+    "description": "Generates swagger docs from express router files",
+    "main": "lib/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/enigmamarketing/express-swagger-docs.git"
+    },
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "keywords": [
+        "swagger",
+        "express"
+    ],
+    "author": "EnigmaMarketing",
+    "license": "Apache 2.0",
+    "dependencies": {
+        "async": "^0.9.0",
+        "clone": "^1.0.2",
+        "doctrine": "^0.6.4",
+        "dustjs-helpers": "^1.7.1",
+        "dustjs-linkedin": "^2.7.1",
+        "js-yaml": "^3.3.1",
+        "merge": "^1.2.0",
+        "swagger-tools": "^0.8.7"
+    },
+    "devDependencies": {
+        "express-enrouten": "^1.2.1",
+        "express": "^4.12.3"
+    }
 }
